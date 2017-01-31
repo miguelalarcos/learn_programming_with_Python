@@ -45,12 +45,12 @@ Lists
 Functions
 ^^^^^^^^^
 
-::
+Suppose we want to calculate the area of a right triangle::
 
-    def triangle_area(side_a, side_b):
-        return (side_a*side_b)/2
+    def area(side_a, side_b):
+        return (side_a*side_b)/2.0
 
-    z = triangle_area(3, 4)
+    z = area(3, 4)
     print(z)
     # 6
 
@@ -91,4 +91,5 @@ Can we tell the computer the same thing with less code?::
 
         for name in names: 
             print("hello, my name's", name)
+
 
