@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="16cm" height="12cm" viewBox="27 27 315 227" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="135" y="29" width="206" height="224"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="135" y="29" width="206" height="224"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="238" y="144.9">
+      <tspan x="238" y="144.9"></tspan>
+    </text>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="27" y="78">
+    <tspan x="27" y="78">triangle</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="76" y1="67" x2="126.815" y2="34.2719"/>
+    <polygon style="fill: #000000" points="133.12,30.2108 127.42,39.8291 126.815,34.2719 122.006,31.422 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="133.12,30.2108 127.42,39.8291 126.815,34.2719 122.006,31.422 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="144" y="37" width="173" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="144" y="37" width="173" height="38"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="230.5" y="59.9">
+      <tspan x="230.5" y="59.9">class: RightTriangle</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="147" y="88" width="169" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="147" y="88" width="169" height="38"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="231.5" y="110.9">
+      <tspan x="231.5" y="110.9">side_a = 3</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="147" y="132" width="168" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="147" y="132" width="168" height="38"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="231" y="154.9">
+      <tspan x="231" y="154.9">side_b = 4</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="146.625" y="203" width="185.75" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="146.625" y="203" width="185.75" height="38"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="239.5" y="225.9">
+      <tspan x="239.5" y="225.9">memory address: 0x00F1</tspan>
+    </text>
+  </g>
+</svg>
