@@ -1,7 +1,7 @@
 Object Oriented Programming
 ---------------------------
 
-Think in the implementation of a function that calculates the area of a rectangle. You can't name it *area* because you have used this name for the right triangle area. You may call it *rectangle_area* and rename the other as *right_triangle_area*. And, what about the area of a circle? At the end you've got lots of functions something like *..._area*. It's a mess, and the solution is the *encapsulation* of the Object Oriented Programming.
+Think in the implementation of a function that calculates the area of a rectangle. You can't name it *area* because you have used this name for the right triangle area. You may call it *rectangle_area* and rename the other as *right_triangle_area*. And, what about the area of a circle? At the end you've got lots of functions something like *..._area*. It's a mess, and the solution is Object Oriented Programming.
 
 This a simple code of OOP::
 
@@ -41,7 +41,7 @@ In the expression ``triangle.area()`` we are calling [#]_ the *area* method **on
 
 .. [#] in *OOP* we say that we *send* the message *area* to the object *triangle*.
 
-*self* is passed, and it's a reference to the *triangle* instance because we're coming from ``triangle.area()``.
+*self* is passed, and it is a reference to the *triangle* instance because we're coming from ``triangle.area()``.
 
 Now, the rectangle example, which is quite similar::
 
