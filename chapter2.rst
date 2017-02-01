@@ -1,63 +1,53 @@
 Object Oriented Programming
 ---------------------------
 
-Think in the implementation of the area of a rectangle. You can't name it *area* because it is used for the right triangle area. You may call it *rectangle_area* and rename the other as *right_triangle_area*. And, what about the area of a circle? At the end you've got lots of functions something like *..._area*. It's a mess, and the solution is the Object Oriented Programming.
-
+Think in the implementation of a function that calculates the area of a rectangle. You can't name it *area* because you have used this name for the right triangle area. You may call it *rectangle_area* and rename the other as *right_triangle_area*. And, what about the area of a circle? At the end you've got lots of functions something like *..._area*. It's a mess, and the solution is the Object Oriented Programming.
 
 This a simple code of OOP::
 
     class RightTriangle:
-        def __init__(self, side_a, side_b):
-            self.side_a = side_a
-            self.side_b = side_b
+        def __init__(self, a, b):
+            self.side_a = a
+            self.side_b = b
 
         def area(self):
             return (self.side_a*self.side_b)/2.0
 
     triangle = RightTriangle(3, 4)
-    tr_2 = RightTriangle(50, 21)
-
     print(triangle.area()) # 6.0
-    print(tr_2.area()) # 525.0
 
-*class* means that we are going to give the abstract definition of something, in this case a right triangle. It's given in the ``__init__`` method (*method* is the name we use to refer a function inside a *class*). The computer allocates a space of memory for every triangle you create with the expression ``variable = RightTriangle(side_a, side_b)``. We move to *__init__* and in a first step we can think that the word *self* refers to this space of memory, where we save the data of the sides adjacent to the right angle.
+*class* means that we are going to give the abstract definition of something, in this case a right triangle. Forget for the moment that definition and look at this::
 
-*triangle* and *tr_2* are called *instances* of the class *RightTriangle*. And now there's no ``area(triangle)`` but the reverse ``triangle.area()``. We move to *area* method and the computer passes the memory space  of *triangle* in *self*. When we are at ``tr_2.area()``, the computer passes us the space of *tr_2* in *self*.
+    triangle = RightTriangle(3, 4)
 
-Now, the rectangle example::
+We're saying to the computer: "please, allocate some memory space for a new right triangle with sides 3 and 4, and assign it to the name *triangle*". Now *triangle* references a new *instance* [#]_ of the class RightTriangle. The computer jumps to the *__init__* [#]_ method [#]_, where *self* is a reference to the new triangle, and the expression ``self.side_a = a`` stores the data at the variable *a* into the attribute [#]_ *side_a* of that new triangle.
+
+.. [#] *instance* is a concrete *object* of a class. For example, Peter is a concrete person of the class Person.
+
+.. [#] *__init__* also known as the *constructor*.
+
+.. [#] *method* is the name we use to refer a function inside a *class*.
+
+.. [#] *attribute* is a variable inside a class.
+
+In the expression ``triangle.area()`` we are calling [#]_ the *area* method **on** the *triangle* instance. Let's go the definition of the method *area*::
+
+    def area(self):
+        return (self.side_a*self.side_b)/2.0
+
+.. [#] in *OOP* we say that we *send* the message *area* to the object *triangle*.
+
+*self* is passed, and it's a reference to the *triangle* instance because we're coming from ``triangle.area()``.
+
+Now, the rectangle example, which is quite similar::
 
     class Rectangle:
-        def __init__(self, side_a, side_b):
-            self.side_a = side_a
-            self.side_b = side_b
+        def __init__(self, a, b):
+            self.side_a = a
+            self.side_b = b
 
         def area(self):
             return self.side_a*self.side_b
 
-    rect_1 = Rectangle(2, 3)
-    print(rect_1.area()) # 6
-
-We've defined another *area* method, inside the class *Rectangle*, and we use it like that: ``rect_1.area()``. Please note that in both cases, the triangle and rectangle, we use the same word *area*.
-
-self
-^^^^
-
-What is *self* exactly? When the computer allocates some memory space for an instance of a class, the space is not only for the data of the instance. There's also some space to indicate the *class* of the instance and other things. So, *self* is a reference to that whole space. Thanks to the reference *self* you can access not only to the data but the methods defined in the class. E.g::
-
-    class Cat:
-        def __init__(self, name):
-            self.name = name
-
-        def speak(self):
-            print(self.name, ':', 'miauuuu!')
-
-        def at_night(self):
-            self.speak()
-            self.speak()
-
-    garfield = Cat('Garfield')
-    garfield.at_night()
-    # Garfield : miauuuu!
-    # Garfield : miauuuu!
-
-We create a cat called *Garfield*. The computer allocates some space for it and returns it to the variable *garfield*. We call the method *at_night* on the instance *garfield*. It's an instance of the class *Cat*, and here there's a method *at_night*, so We go to the this definition. The reference to *garfield* is passed as the argument *self*. Then *speak* is called on *self* (the instance *garfield*). We go to the definition of *speak* and print some text. Note we access the attribute *name* of *self*, i.e. *garfield* instance.
+    rect = Rectangle(2, 3)
+    print(rect.area()) # 6
