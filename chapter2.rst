@@ -24,7 +24,7 @@ We're saying to the computer: "please, allocate some memory space for a new righ
 
 .. image:: triangle_reference.svg
 
-The expression ``RightTriangle(3, 4)`` not only allocates some space but initializes its state with the data supplied. It's done inside the *__init__* [#]_ method [#]_, where *self* is a reference to the new triangle created, and the expression ``self.side_a = a`` stores the data at the variable *a* (the integer 3) into the attribute [#]_ *side_a* of that new triangle.
+The expression ``RightTriangle(3, 4)`` not only allocates some space but initializes its state with the data supplied. It's done inside the *__init__* [#]_ method [#]_, where *self* is a reference to the new triangle created, and the expression ``self.side_a = a`` stores the data at the variable *a* (the integer 3) into the attribute *side_a* of that new triangle.
 
 .. [#] *instance* is a concrete *object* of a class. For example, Peter is a concrete person of the class Person.
 
@@ -32,16 +32,14 @@ The expression ``RightTriangle(3, 4)`` not only allocates some space but initial
 
 .. [#] *method* is the name we use to refer a function inside a *class*.
 
-.. [#] *attribute* is a variable inside a class.
-
-In the expression ``triangle.area()`` we are calling [#]_ the *area* method **on** the *triangle* instance. Let's go the definition of the method *area*::
+In the expression ``triangle.area()`` we are calling [#]_ the *area* method **on** the *triangle* instance. Let's go to the definition of the method *area*::
 
     def area(self):
         return (self.side_a*self.side_b)/2.0
 
 .. [#] in *OOP* we say that we *send* the message *area* to the object *triangle*.
 
-*self* is passed, and it is a reference to the *triangle* instance because we're coming from ``triangle.area()``.
+*self* is passed, and it is a reference to the *triangle* instance because we're coming from ``triangle.area()``. *self* is something like "the object we are currently in".
 
 Now, the rectangle example, which is quite similar::
 
@@ -55,3 +53,5 @@ Now, the rectangle example, which is quite similar::
 
     rect = Rectangle(2, 3)
     print(rect.area()) # 6
+
+Note that we are using the word *area* both in *RightTriangle* and in *Rectangle*. There's no mess.
