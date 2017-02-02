@@ -24,7 +24,7 @@ We're saying to the computer: "please, reserve some memory space for a new right
 
 .. image:: triangle_reference.svg
 
-The expression ``RightTriangle(3, 4)`` not only allocates some space but moves the pointer of execution to the newly created instance, concretely to the *__init__* [#]_ method [#]_ [#]_. The expression ``self.side_a = a`` means "**my** attribute *side_a* now has got the value of the variable *a*, i.e. the integer 3".
+The expression ``RightTriangle(3, 4)`` not only allocates some space but **moves** the control of execution to the newly created triangle, concretely to the *__init__* [#]_ method [#]_ [#]_. The expression ``self.side_a = a`` means that this triangle instance says: "**my** attribute *side_a* now has got the value of the variable *a*, i.e. the integer 3".
 
 .. [#] *instance* is a concrete *object* of a class. For example, Peter is a concrete person of the class Person.
 
@@ -34,12 +34,12 @@ The expression ``RightTriangle(3, 4)`` not only allocates some space but moves t
 
 .. [#] actually there's no copy of the methods for each instance. As they don't change, they stay only at the definition of the class.
 
-In the expression ``triangle.area()`` we are moving to the *area* method of the *triangle* instance. Let's go to the definition of the method *area*::
+In the expression ``triangle.area()`` we are moving the control of execution to the *area* method of the *triangle* instance. Let's go to the definition of the method *area*::
 
     def area(self):
         return (self.side_a*self.side_b)/2.0
 
-It means "**I** will return the value of my side_a multiplied by my side_b and divided by 2".
+It means that this triangle instance says: "**I** will return the value of my side_a multiplied by my side_b and divided by 2".
 
 Now, the rectangle example, which is quite similar::
 
