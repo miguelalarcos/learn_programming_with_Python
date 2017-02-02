@@ -20,11 +20,11 @@ This a simple code of OOP::
 
     triangle = RightTriangle(3, 4)
 
-We're saying to the computer: "please, allocate some memory space for a new right triangle, and assign it to the name *triangle*". Now *triangle* references a new *instance* [#]_ of the class RightTriangle.
+We're saying to the computer: "please, reserve some memory space for a new right triangle, and assign it to the name *triangle*". Now *triangle* references a new *instance* [#]_ of the class RightTriangle.
 
 .. image:: triangle_reference.svg
 
-The expression ``RightTriangle(3, 4)`` not only allocates some space but initializes its state with the data supplied. It's done inside the *__init__* [#]_ method [#]_, where *self* is a reference to the new triangle created, and the expression ``self.side_a = a`` stores the data at the variable *a* (the integer 3) into the attribute *side_a* of that new triangle.
+The expression ``RightTriangle(3, 4)`` not only allocates some space but moves the pointer of execution to the *__init__* [#]_ method [#]_ of the instance. The expression ``self.side_a = a`` means "my attribute *side_a* now has got the value of the variable *a*, i.e. the integer 3". *self* is something like "the object that we are currently in".
 
 .. [#] *instance* is a concrete *object* of a class. For example, Peter is a concrete person of the class Person.
 
@@ -32,14 +32,12 @@ The expression ``RightTriangle(3, 4)`` not only allocates some space but initial
 
 .. [#] *method* is the name we use to refer a function inside a *class*.
 
-In the expression ``triangle.area()`` we are calling [#]_ the *area* method **on** the *triangle* instance. Let's go to the definition of the method *area*::
+In the expression ``triangle.area()`` we are moving to the *area* method of the *triangle* instance. Let's go to the definition of the method *area*::
 
     def area(self):
         return (self.side_a*self.side_b)/2.0
 
-.. [#] in *OOP* we say that we *send* the message *area* to the object *triangle*.
-
-*self* is passed, and it is a reference to the *triangle* instance because we're coming from ``triangle.area()``. *self* is something like "the object we are currently in".
+It means "I will return the value of my side_a multiplied by my side_b and divided by 2".
 
 Now, the rectangle example, which is quite similar::
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
-<svg width="16cm" height="12cm" viewBox="27 27 315 227" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="16cm" height="15cm" viewBox="27 27 315 291" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g>
-    <rect style="fill: #ffffff" x="135" y="29" width="206" height="224"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="135" y="29" width="206" height="224"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="238" y="144.9">
-      <tspan x="238" y="144.9"></tspan>
+    <rect style="fill: #ffffff" x="135" y="29" width="206" height="288"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="135" y="29" width="206" height="288"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="238" y="176.9">
+      <tspan x="238" y="176.9"></tspan>
     </text>
   </g>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="27" y="78">
@@ -38,10 +38,16 @@
     </text>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="146.625" y="203" width="185.75" height="38"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="146.625" y="203" width="185.75" height="38"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="239.5" y="225.9">
-      <tspan x="239.5" y="225.9">memory address: 0x00F1</tspan>
+    <rect style="fill: #ffffff" x="147" y="176" width="167" height="123"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="147" y="176" width="167" height="123"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="230.5" y="217.4">
+      <tspan x="230.5" y="217.4">methods:</tspan>
+      <tspan x="230.5" y="233.4"></tspan>
+      <tspan x="230.5" y="249.4">__init__</tspan>
+      <tspan x="230.5" y="265.4">area</tspan>
     </text>
   </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="230.5" y="237.5">
+    <tspan x="230.5" y="237.5"></tspan>
+  </text>
 </svg>
