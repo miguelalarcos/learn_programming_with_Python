@@ -34,7 +34,7 @@ The expression ``RightTriangle(3, 4)`` not only allocates some space but **moves
 
 .. [#] actually there's no copy of the methods for each instance. As they don't change, they stay only at the definition of the class.
 
-In the expression ``triangle.area()`` we are moving the control of execution to the *area* method of the *triangle* instance. Let's go to the definition of the method *area*::
+In the expression ``triangle.area()`` we are moving the control of execution to the *triangle* instance, specifically to the *area* method. Let's go to the definition::
 
     def area(self):
         return (self.side_a*self.side_b)/2.0
