@@ -16,11 +16,11 @@ This a simple code of OOP::
     triangle = RightTriangle(3, 4)
     print(triangle.area()) # 6.0
 
-*class* means that we are going to give the abstract definition of something, in this case a right triangle. When we create a new triangle, inside *__init__* we say that its *side_a* will be the value in *a*, and its *side_b* the value in *b*.
+*class* means that we are going to give the abstract definition of something, in this case a right triangle. When we create a **new triangle** (``RightTriangle(3, 4)``), inside *__init__* we say that **its** *side_a* will be the value in *a* (3), and **its** *side_b* the value in *b* (4).
 
-When we find *triangle.area()* we go to the method *area* of the instance *triangle* and it returns its *side_a* multiplied by its *side_b* and divided by 2.
+When we find ``triangl.area()`` we go to the method *area* of the instance **triangle** and it returns **its** *side_a* multiplied by **its** *side_b* and divided by 2.
 
-You might wonder why do we use the word *self*? When we find *triangle.area()*, the computer identifies *triangle* as an object, and sets it as the current object. Then, inside *area*, *self* means the current object, i.e, the triangle instance.
+You might wonder why do we use the word *self*. When we find *triangle.area()*, the computer identifies *triangle* as an object, and sets it as the current object. Then, inside *area*, *self* means the current object, i.e, the triangle instance.
 
 Now, the rectangle example, which is quite similar::
 
