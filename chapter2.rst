@@ -16,7 +16,7 @@ This a simple code of OOP::
     triangle = RightTriangle(3, 4)
     print(triangle.area()) # 6.0
 
-*class* means that we are going to give the abstract definition of something, in this case a right triangle. Inside *__init__* we can seen ``self.side_a = a``, which means that a right triangle has got an attribute *side_a* initialized to the value of *a*. We'll see the meaning of *self* later. Now look at this::
+*class* means that we are going to give the abstract definition of something, in this case a right triangle. Inside *__init__* we can seen ``self.side_a = a``, which means that a right triangle has got an attribute *side_a* initialized to the value passed in *a*. We'll see the strict meaning of *self* later. Now look at this::
 
     triangle = RightTriangle(3, 4)
 
@@ -39,7 +39,7 @@ In the expression ``triangle.area()`` we are moving the control of execution to 
     def area(self):
         return (self.side_a*self.side_b)/2.0
 
-It means that this triangle instance says: "**I** will return the value of my side_a multiplied by my side_b and divided by 2".
+It means that this triangle instance says: "**I** will return the value of my side_a multiplied by my side_b and divided by 2". *self* is the object we are currently in. But when defining a class you won't think like the object you are currently in becaus you are not on any instance yet. You will think that *self* means an instance. 
 
 Now, the rectangle example, which is quite similar::
 
