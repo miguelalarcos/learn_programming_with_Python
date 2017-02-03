@@ -16,7 +16,7 @@ This a simple code of OOP::
     triangle = RightTriangle(3, 4)
     print(triangle.area()) # 6.0
 
-*class* means that we are going to give the abstract definition of something, in this case a right triangle. Forget for the moment that definition and look at this::
+*class* means that we are going to give the abstract definition of something, in this case a right triangle. Inside *__init__* we can seen ``self.side_a = a``, which means that a right triangle has got an attribute *side_a* initialized to the value of *a*. We'll see the meaning of *self* later. Now look at this::
 
     triangle = RightTriangle(3, 4)
 
@@ -55,3 +55,5 @@ Now, the rectangle example, which is quite similar::
     print(rect.area()) # 6
 
 Note that we are using the word *area* both in *RightTriangle* and in *Rectangle*. There's no mess.
+
+Exercise: create a class named *Person* whose constructor receives the name of a person, and has got a method called *my_name_is* that returns "Hello, my name is <the name of the person passed in the constructor>".
