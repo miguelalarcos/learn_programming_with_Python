@@ -16,11 +16,17 @@ This a simple code of OOP::
     triangle = RightTriangle(3, 4)
     print(triangle.area()) # 6.0
 
-*class* means that we are going to give the definition of something, in this case a right triangle. When we create a **new triangle** (``RightTriangle(3, 4)``), the method *__init__* is called and we can say that **its** *side_a* will be the value in *a* (3), and **its** *side_b* the value in *b* (4).
+*class* means that we are going to give the definition of something, in this case a right triangle. When we create a **new triangle** (``RightTriangle(3, 4)``), the method *__init__* [#]_ is called and we can say that **its** *side_a* will be the value in *a* (3), and **its** *side_b* the value in *b* (4).
 
-When we find ``triangle.area()`` we go to the method *area* of the instance **triangle** and it returns **its** *side_a* multiplied by **its** *side_b* and divided by 2.
+.. [#] also known as the *constructor*.
 
-You might wonder why do we use the word *self*. When we find *triangle.area()*, the computer identifies *triangle* as an object, and sets it as the current object. Then, inside *area*, *self* means the current object, i.e, the triangle instance.
+When we find ``triangle.area()`` we go to the method [#]_ *area* of the **triangle** instance and it returns **its** *side_a* multiplied by **its** *side_b* and divided by 2.
+
+.. [#] *method* is a function inside a *class*.
+
+You might wonder why do we use the word *self* [#]_. When we find *triangle.area()*, the computer identifies *triangle* as an object, and sets it as the current object. Then, inside *area*, *self* means the current object, i.e, the triangle instance.
+
+.. [#] in Java language the used word is *this*, and in Ruby language it's the symbol *@*.
 
 Now, the rectangle example, which is quite similar::
 
