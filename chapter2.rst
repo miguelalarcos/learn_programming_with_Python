@@ -16,30 +16,11 @@ This a simple code of OOP::
     triangle = RightTriangle(3, 4)
     print(triangle.area()) # 6.0
 
-*class* means that we are going to give the abstract definition of something, in this case a right triangle. Inside *__init__* we can seen ``self.side_a = a``, which means that a right triangle has got an attribute *side_a* initialized to the value passed in *a*. We'll see the strict meaning of *self* later. Now look at this::
+*class* means that we are going to give the abstract definition of something, in this case a right triangle. When we create a new triangle, inside *__init__* we say that its *side_a* will be the value in *a*, and its *side_b* the value in *b*.
 
-    triangle = RightTriangle(3, 4)
+When we find *triangle.area()* we go to the method *area* of the instance *triangle* and it returns its *side_a* multiplied by its *side_b* and divided by 2.
 
-We're saying to the computer: "please, reserve some memory space for a new right triangle, and assign it to the name *triangle*". Now *triangle* references a new *instance* [#]_ of the class RightTriangle.
-
-.. image:: triangle_reference.svg
-
-The expression ``RightTriangle(3, 4)`` not only allocates some space but **moves** the control of execution to the newly created triangle, concretely to the *__init__* [#]_ method [#]_ [#]_. The expression ``self.side_a = a`` means that this triangle instance says: "**my** attribute *side_a* now has got the value of the variable *a*, i.e. the integer 3".
-
-.. [#] *instance* is a concrete *object* of a class. For example, Peter is a concrete person of the class Person.
-
-.. [#] *__init__* also known as the *constructor*.
-
-.. [#] *method* is the name we use to refer a function inside a *class*.
-
-.. [#] actually there's no copy of the methods for each instance. As they don't change, they stay only at the definition of the class.
-
-In the expression ``triangle.area()`` we are moving the control of execution to the *triangle* instance, specifically to the *area* method. Let's go to the definition::
-
-    def area(self):
-        return (self.side_a*self.side_b)/2.0
-
-It means that this triangle instance says: "**I** will return the value of my side_a multiplied by my side_b and divided by 2". *self* is the object we are currently in. But when defining a class you won't think like the object you are currently in becaus you are not on any instance yet. You will think that *self* means an instance. 
+You might wonder why do we use the word *self*? When we find *triangle.area()*, the computer identifies *triangle* as an object, and sets it as the current object. Then, inside *area*, *self* means the current object, i.e, the triangle instance.
 
 Now, the rectangle example, which is quite similar::
 
