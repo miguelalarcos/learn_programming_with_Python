@@ -3,7 +3,7 @@ Object Oriented Programming
 
 Think in the implementation of a function that calculates the area of a rectangle. You can't name it *area* because you have used this name for the right triangle area. You may call it *rectangle_area* and rename the other as *right_triangle_area*. And, what about the area of a circle? At the end you've got lots of functions something like *..._area*. It's a mess, and the solution is Object Oriented Programming.
 
-First we need to understand the concept of "an object takes the control"::
+First we need to understand the concept of "an object takes the control of execution"::
 
     lista = [13, 3, 7]
     lista.sort()
