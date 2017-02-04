@@ -25,15 +25,15 @@ This a simple code of OOP::
     triangle = RightTriangle(3, 4)
     print(triangle.area()) # 6.0
 
-*class* means that we are going to give the definition of something, in this case a right triangle. A right triangle is defined by the two sides adjacent to the right angle; call them *side_a* and *side_b*. The area of a right triangle is :math:`\frac{side_a side_b}{2}`
+*class* means that we are going to give the definition of something, in this case a right triangle. A right triangle is defined by the two sides adjacent to the right angle; call them side\ :sub:`a` and side\ :sub:`b`. The area of a right triangle is :math:`\frac{side_a side_b}{2}`
 
-When we create a **new triangle** (``RightTriangle(3, 4)``), it takes the control and executes its method [#]_ *__init__* [#]_. ``self.side_a = a`` means that *side_a* of itself (the newly created triangle) will has the value in *a* (3). *self* references the object that has the control.
+When we create a **new triangle** (``RightTriangle(3, 4)``), it takes the control and executes its method [#]_ *__init__* [#]_. ``self.side_a = a`` means that side\ :sub:`a` of itself (the newly created triangle) will has the value in *a* (3). *self* references the object that has the control.
 
 .. [#] *method* is a function inside a *class*.
 
 .. [#] also known as the *constructor*. It initializes the state of the new object.
 
-When we find ``triangle.area()``, the **triangle** instance takes the control and returns its *side_a*  multiplied by its *side_b* and divided by 2.
+When we find ``triangle.area()``, the **triangle** instance takes the control and returns its side\ :sub:`a`  multiplied by its side\ :sub:`b` and divided by 2.
 
 Now, the rectangle example, which is quite similar::
 
