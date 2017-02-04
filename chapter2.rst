@@ -3,6 +3,15 @@ Object Oriented Programming
 
 Think in the implementation of a function that calculates the area of a rectangle. You can't name it *area* because you have used this name for the right triangle area. You may call it *rectangle_area* and rename the other as *right_triangle_area*. And, what about the area of a circle? At the end you've got lots of functions something like *..._area*. It's a mess, and the solution is Object Oriented Programming.
 
+First we need to understand the concept of "an object takes the control"::
+
+    lista = [13, 3, 7]
+    lista.sort()
+    print(lista)
+    # [3, 7, 13]
+
+When we find the instruction ``lista.sort()`` we are saying that the object *lista* takes the control and executes its *sort* function.
+
 This a simple code of OOP::
 
     class RightTriangle:
@@ -16,13 +25,13 @@ This a simple code of OOP::
     triangle = RightTriangle(3, 4)
     print(triangle.area()) # 6.0
 
-*class* means that we are going to give the definition of something, in this case a right triangle. A right triangle is defined by the two sides adjacent to the right angle; call them *side_a* and *side_b*.  When we create a **new triangle** (``RightTriangle(3, 4)``), the method [#]_ *__init__* [#]_ is executed and ``self.side_a = a`` means that *side_a* of *self*, i.e, *side_a* of **this triangle** will be the value in *a* (3).
+*class* means that we are going to give the definition of something, in this case a right triangle. A right triangle is defined by the two sides adjacent to the right angle; call them *side_a* and *side_b*.  When we create a **new triangle** (``RightTriangle(3, 4)``), it takes the control and execute its method [#]_ *__init__* [#]_. ``self.side_a = a`` means that *side_a* of the newly created triangle will has the value in *a* (3). *self* references the object that has the control.
 
 .. [#] *method* is a function inside a *class*.
 
 .. [#] also known as the *constructor*. It initializes the state of the new object.
 
-When we find ``triangle.area()`` we go to the method *area* of the **triangle** instance and it returns the *side_a* of **this triangle** multiplied by *side_b* of **this triangle** and divided by 2.
+When we find ``triangle.area()``, the **triangle** instance takes the control and returns its *side_a*  multiplied by its *side_b* and divided by 2.
 
 Now, the rectangle example, which is quite similar::
 
