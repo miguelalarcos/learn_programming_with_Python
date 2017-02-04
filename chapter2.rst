@@ -25,7 +25,9 @@ This a simple code of OOP::
     triangle = RightTriangle(3, 4)
     print(triangle.area()) # 6.0
 
-*class* means that we are going to give the definition of something, in this case a right triangle. A right triangle is defined by the two sides adjacent to the right angle; call them *side_a* and *side_b*.  When we create a **new triangle** (``RightTriangle(3, 4)``), it takes the control and execute its method [#]_ *__init__* [#]_. ``self.side_a = a`` means that *side_a* of itself (the newly created triangle) will has the value in *a* (3). *self* references the object that has the control.
+*class* means that we are going to give the definition of something, in this case a right triangle. A right triangle is defined by the two sides adjacent to the right angle; call them *side_a* and *side_b*. The area of a right triangle is :math:`\frac{side_a side_b}{2}`
+
+When we create a **new triangle** (``RightTriangle(3, 4)``), it takes the control and executes its method [#]_ *__init__* [#]_. ``self.side_a = a`` means that *side_a* of itself (the newly created triangle) will has the value in *a* (3). *self* references the object that has the control.
 
 .. [#] *method* is a function inside a *class*.
 
