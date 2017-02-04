@@ -16,13 +16,13 @@ This a simple code of OOP::
     triangle = RightTriangle(3, 4)
     print(triangle.area()) # 6.0
 
-*class* means that we are going to give the definition of something, in this case a right triangle. When we create a **new triangle** (``RightTriangle(3, 4)``), the method [#]_ *__init__* [#]_ is executed and ``self.side_a = a`` means that *side_a* of *self*, i.e, *side_a* of **this triangle** will be the value in *a* (3).
+*class* means that we are going to give the definition of something, in this case a right triangle. A right triangle is defined by the two sides adjacent to the right angle; call them *side_a* and *side_b*.  When we create a **new triangle** (``RightTriangle(3, 4)``), the method [#]_ *__init__* [#]_ is executed and ``self.side_a = a`` means that *side_a* of *self*, i.e, *side_a* of **this triangle** will be the value in *a* (3).
 
 .. [#] *method* is a function inside a *class*.
 
-.. [#] also known as the *constructor*.
+.. [#] also known as the *constructor*. It initializes the state of the new object.
 
-When we find ``triangle.area()`` we go to the method *area* of the **triangle** instance and it returns the *side_a* of this triangle multiplied by *side_b* of this triangel and divided by 2.
+When we find ``triangle.area()`` we go to the method *area* of the **triangle** instance and it returns the *side_a* of **this triangle** multiplied by *side_b* of **this triangle** and divided by 2.
 
 Now, the rectangle example, which is quite similar::
 
