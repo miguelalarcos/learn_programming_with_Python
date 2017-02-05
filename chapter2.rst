@@ -10,7 +10,15 @@ First we need to understand the concept of "an object takes the control of execu
     print(lista)
     # [3, 7, 13]
 
-When we find the instruction ``lista.sort()`` we are saying that the object *lista* takes the control and executes its *sort* function.
+When we find the instruction ``lista.sort()`` we are saying that the thing [#]_ *lista* takes the control and executes its *sort* function. Another example::
+
+    text = 'hello'
+    print(text.upper())
+    # 'HELLO'
+
+The object referenced by *text* (a string) takes the control and executes its function *upper*.
+
+.. [#] we call it an *object*.
 
 This a simple code of OOP::
 
