@@ -10,15 +10,19 @@ First we need to understand the concept of "an object takes the control of execu
     print(lista)
     # [3, 7, 13]
 
-When we find the instruction ``lista.sort()`` we are saying that the thing [#]_ *lista* takes the control and executes its *sort* function. Another example::
+When we find the instruction ``lista.sort()`` we are saying that the object *lista* takes the control and executes its *sort* function. Another example::
 
     text = 'hello'
     print(text.upper())
     # 'HELLO'
 
-The object referenced by *text* (a string) takes the control and executes its function *upper*.
+The object *text* (a string) takes the control and executes its function *upper*.
 
-.. [#] we call it an *object*.
+This is how we set an attribute on an object::
+
+    peter.hair_color = 'red'
+
+We are saying that *hair_color* **of** *peter* object **is** red.
 
 This a simple code of OOP::
 
@@ -58,4 +62,4 @@ Now, the rectangle example, which is quite similar::
 
 Note that we are using the word *area* both in *RightTriangle* and in *Rectangle*. There's no mess.
 
-Exercise: create a class named *Person* whose constructor receives the name of a person, and has got a method called *my_name_is* that returns "Hello, my name is <the name of the person passed in the constructor>".
+**Exercise**: create a class named *Person* whose constructor receives the name of a person, and has got a method called *my_name_is* that returns "Hello, my name is <the name of the person passed in the constructor>".
