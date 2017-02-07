@@ -14,12 +14,12 @@ We are saying that *hair_color* **of** *peter* object **is** red.
 This how to do the same through a method::
 
     class Person:
-        def __init__(name, age):
+        def __init__(self, name, age):
             self.name = name
             self.age = age
             self.hair_color = 'black'
 
-        def set_hair_color(new_color):
+        def set_hair_color(self, new_color):
             self.hair_color = new_color
 
     peter = Person('Peter', 33)
@@ -34,11 +34,11 @@ The expression ``peter = Person('Peter', 33)`` means that we are creating an obj
 Another example::
 
     class Person:
-        def __init__(name, age):
+        def __init__(self, name, age):
             self.name = name
             self.age = age
 
-        def i_am_friend_of(other):
+        def i_am_friend_of(self, other):
             print(self.name, 'said: I am friend of ', other.name)
 
     peter = Person('Peter', 33)
