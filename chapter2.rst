@@ -3,20 +3,9 @@ Object Oriented Programming
 
 Think in the implementation of a function that calculates the area of a rectangle. You can't name it *area* because you have used this name for the right triangle area. You may call it *rectangle_area* and rename the other as *right_triangle_area*. And, what about the area of a circle? At the end you've got lots of functions something like *..._area*. It's a mess, and the solution is Object Oriented Programming.
 
-First we need to understand the concept of "an object takes the control of execution"::
+And object is sometihng that has attributes and can execute its functions. For example, a person has the attributes *name*, *age* and *hair_color*, for example, and can execute its method [#]_ *change_hair_color*.
 
-    lista = [13, 3, 7]
-    lista.sort()
-    print(lista)
-    # [3, 7, 13]
-
-When we find the instruction ``lista.sort()`` we are saying that the object *lista* takes the control and executes its *sort* function. Another example::
-
-    text = 'hello'
-    print(text.upper())
-    # 'HELLO'
-
-The object *text* (a string) takes the control and executes its function *upper*.
+.. [#] method is how we call a function in the context of an object
 
 This is how we set an attribute on an object::
 
@@ -24,42 +13,34 @@ This is how we set an attribute on an object::
 
 We are saying that *hair_color* **of** *peter* object **is** red.
 
-This a simple code of OOP::
+This how to do the same through a method::
 
-    class RightTriangle:
-        def __init__(self, a, b):
-            self.side_a = a
-            self.side_b = b
+    class Person:
+        def __init__(name, age):
+            self.name = name
+            self.age = age
 
-        def area(self):
-            return (self.side_a*self.side_b)/2.0
+        def change_hair_color(new_color):
+            self.hair_color = new_color
 
-    triangle = RightTriangle(3, 4)
-    print(triangle.area()) # 6.0
+    peter = Person('Peter', 33)
+    peter.change_hair_color('blue')
 
-*class* means that we are going to give the definition of something, in this case a right triangle. A right triangle is defined by the two sides adjacent to the right angle; call them side\ :sub:`a` and side\ :sub:`b`. The area of a right triangle is :math:`\frac{side_a side_b}{2}`
+*class* means that we are going to give the definition of something, in this case a *Person*. Then, *peter* is an object of type *Person*. ``peter.change_hair_color('blue')`` means that peter object takes control and executes its method *change_hair_color*, i.e, ``self.hair_color = new_color``. It's like peter said: "hair color of self is blue".
 
-When we create a **new triangle** (``RightTriangle(3, 4)``), it **takes the control** and executes its method [#]_ *__init__* [#]_. ``self.side_a = a`` means that **side_a of itself** will has got the value in *a* (3).
+The expression ``peter = Person('Peter', 33)`` means that we are creating an object and assigning it to the variable *peter*. Then *peter* executes its *__init__* method with the parameters *name* and *age*, 'Peter' and 33.
 
-.. [#] *method* is a function inside a *class*.
+::
 
-.. [#] also known as the *constructor*. It initializes the state of the new object.
+    class Person:
+        def __init__(name, age):
+            self.name = name
+            self.age = age
 
-When we find ``triangle.area()``, the **triangle** instance takes the control and returns its side\ :sub:`a`  multiplied by its side\ :sub:`b` and divided by 2.
+        def i_am_friend_of(other):
+            print(self.name, 'said: I am friend of ', other.name)
 
-Now, the rectangle example, which is quite similar::
-
-    class Rectangle:
-        def __init__(self, a, b):
-            self.side_a = a
-            self.side_b = b
-
-        def area(self):
-            return self.side_a*self.side_b
-
-    rect = Rectangle(2, 3)
-    print(rect.area()) # 6
-
-Note that we are using the word *area* both in *RightTriangle* and in *Rectangle*. There's no mess.
-
-**Exercise**: create a class named *Person* whose constructor receives the name of a person, and has got a method called *my_name_is* that returns "Hello, my name is <the name of the person passed in the constructor>".
+    peter = Person('Peter', 33)
+    mary = Person('Mary', 32)
+    peter.i_am_friend_of(mary)
+    # Peter said: I am friend of Mary
