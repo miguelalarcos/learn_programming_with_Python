@@ -1,9 +1,7 @@
 Object Oriented Programming
 ---------------------------
 
-Think in the implementation of a function that calculates the area of a rectangle. You can't name it *area* because you have used this name for the right triangle area. You may call it *rectangle_area* and rename the other as *right_triangle_area*. And, what about the area of a circle? At the end you've got lots of functions something like *..._area*. It's a mess, and the solution is Object Oriented Programming.
-
-And object is sometihng that has attributes and can execute its functions. For example, a person has the attributes *name*, *age* and *hair_color*, for example, and can execute its method [#]_ *change_hair_color*.
+An object is sometihng that has attributes and can execute its functions. For example, a person has the attributes *name*, *age* and *hair_color* and can execute its method [#]_ *set_hair_color*.
 
 .. [#] method is how we call a function in the context of an object
 
@@ -19,18 +17,21 @@ This how to do the same through a method::
         def __init__(name, age):
             self.name = name
             self.age = age
+            self.hair_color = 'black'
 
-        def change_hair_color(new_color):
+        def set_hair_color(new_color):
             self.hair_color = new_color
 
     peter = Person('Peter', 33)
     peter.change_hair_color('blue')
 
-*class* means that we are going to give the definition of something, in this case a *Person*. Then, *peter* is an object of type *Person*. ``peter.change_hair_color('blue')`` means that peter object takes control and executes its method *change_hair_color*, i.e, ``self.hair_color = new_color``. It's like peter said: "hair color of self is blue".
+*class* means that we are going to give the definition of something, in this case a *Person*. Then, *peter* is an object of type *Person* and ``peter.set_hair_color('blue')`` means that peter object takes control and executes its method *set_hair_color*, i.e, ``self.hair_color = new_color``. It's like peter said: "hair color of self is blue".
 
-The expression ``peter = Person('Peter', 33)`` means that we are creating an object and assigning it to the variable *peter*. Then *peter* executes its *__init__* method with the parameters *name* and *age*, 'Peter' and 33.
+The expression ``peter = Person('Peter', 33)`` means that we are creating an object and assigning it to the variable *peter*. Then *peter* executes its *__init__* [#]_ method with the parameters *name* and *age*, 'Peter' and 33.
 
-::
+.. [#] also known as the *constructor*.
+
+Another example::
 
     class Person:
         def __init__(name, age):
