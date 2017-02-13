@@ -29,6 +29,9 @@ Variables
     z = x + y
     print(z)
     # 3
+    z = 8
+    print(z)
+    # 8
 
 Lists
 ^^^^^
@@ -42,6 +45,23 @@ Lists
     print(lista[1])
     # yellow
 
+We access the first position of a list with the index *0*.
+
+Conditions
+^^^^^^^^^^
+
+Please note the *==* for the condition and the *=* for the asignment::
+
+    x = 5
+
+    if x == 0:
+        print('x is equal to 0')
+    else:
+        print('x is not equal to 0')
+
+    # x is not equal to 0
+
+
 Functions
 ^^^^^^^^^
 
@@ -54,19 +74,15 @@ Suppose we want to calculate the area of a right triangle::
     print(z)
     # 6
 
-Conditions
-^^^^^^^^^^
+*def* means we are going to write the definition of a function. A function may have some variables as input, and an output, a calculated value. The calculated value is returned by the keyword *return*. Here is a more sofisticated function, with several aparition of the word *return*::
 
-::
-
-    x = 5
-
-    if x == 0:
-        print('x is equal to 0')
-    else:
-        print('x is not equal to 0')
-
-    # x is not equal to 0
+    def comparison(a, b):
+        if a == b:
+            return 0
+        elif a < b:
+            return 1
+        else:
+            return -1
 
 Loops
 ^^^^^
@@ -85,11 +101,11 @@ You can see repetitive code::
 
     print("hello, my name's ...")
 
-Can we tell the computer the same thing with less code?::
+Can we tell the computer the same thing with less code? Yes, iterating a list::
 
-        names = ['María', 'Miguel', 'Raquel']
+    names = ['María', 'Miguel', 'Raquel']
 
-        for name in names: 
-            print("hello, my name's", name)
+    for name in names:
+        print("hello, my name's", name)
 
-
+This mean that for each *name* inside the list *names*, print a text. You can choose whatever word instead of *name*, but remember to use words for the variables according to the circumstances.
