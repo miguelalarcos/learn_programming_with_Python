@@ -84,6 +84,29 @@ Suppose we want to calculate the area of a right triangle::
         else:
             return -1
 
+Now a function that returns a text like "2 days, 7 hours, 5 minutes and 30 seconds" given a number of seconds::
+
+    def time_repr(seconds):
+        seconds_in_a_day = 24*60*60
+        seconds_in_an_hour = 60*60
+        seconds_in_a_minute = 60
+
+        days = seconds // seconds_in_a_day
+        rest = seconds % seconds_in_a_day
+
+        hours = rest // seconds_in_an_hour
+        rest = rest % seconds_in_an_hour
+
+        minutes = rest // seconds_in_a_minute
+        seconds = rest % seconds_in_a_minute
+
+        return "%d days, %d hours, %d minutes and %d seconds" % (days, hours, minutes, seconds)
+
+    t = time_repr(1000000)
+    print(t)
+
+    # 11 days, 13 hours, 46 minutes and 40 seconds
+
 Loops
 ^^^^^
 
@@ -109,3 +132,31 @@ Can we tell the computer the same thing with less code? Yes, iterating over a li
         print("hello, my name's", name)
 
 This mean that for each *name* inside the list *names*, print a text. You can choose whatever word instead of *name*, but remember to use words for the variables according to the circumstances.
+
+Loop over a list of integers::
+
+    for i in [0, 1, 2, 3]:
+        print(i)
+
+But if we want to iterate over a list of 1000 integers, should I write the entire list? No, we use the *range* function::
+
+    for i in range(1000):
+        print(i)
+
+    # 0
+    # 1
+    # 2
+    ...
+    # 998
+    # 999
+
+Dictionaries
+^^^^^^^^^^^^
+Dictionaries are similar to lists, but instead of having an integer as index, it can have other kind of objects, like strings::
+
+    dct_DNI = {'4842R': 'Miguel', '2256Z': 'Raquel'}
+
+    person = dct_DNI['4842R']
+    print(person)
+
+    # Miguel

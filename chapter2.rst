@@ -85,7 +85,9 @@ And now the class *Cat* that extend class *Pet*::
 
     # my name is Mifu
 
-As you can see, *my_name_is* is not defined in *Cat*, but in *Pet*. *Cat* would have the method *__init__* from *Pet*, but it's overwritten. But we have a problem, because the *name* attribute is initialized in the *__init__* method of *Pet*. How do we access this?::
+As you can see, *my_name_is* is not defined in *Cat*, but in *Pet*.
+
+*Cat* would have the method *__init__* from *Pet*, but it's overwritten. But we have a problem, because the *name* attribute is initialized in the *__init__* method of *Pet*. How do we access this?::
 
     super().__init__(name)
 
