@@ -1,47 +1,100 @@
 Object Oriented Programming
 ---------------------------
 
-An object is a set of attributes and functions that can execute. For example, a person has the attributes *name*, *age* and *hair_color* and can execute its method [#]_ *dye_hair*.
+Class and object
+^^^^^^^^^^^^^^^^
 
-.. [#] method is how we call a function in the context of an object
+Think in a table. You can think in an abstact way and say that a table has got a board and some legs. And it is made of some material. This is the *class* Table. Now think in a concrete table, the table in my kitchen, made of wood and with 4 legs. This is an instance table from the class Table, and it's an object.
 
-This is how we set an attribute on an object::
+Let's introduce the definition of the class *Table*::
 
-    peter.hair_color = 'red'
+    class Table:
+        def __init__(self, material, legs, color):
+            self.material = material
+            self.legs = legs
+            self.color = color
 
-We are saying that *hair_color* **of** *peter* object **is** red.
+        def info(self):
+            print("I am a table made of", self.material, "and with", self.legs,"legs.")
 
-This how to do the same through a method::
+And forget it for a moment. Let's see how we create a table::
 
-    class Person:
-        def __init__(self, name, age):
-            self.name = name
-            self.age = age
-            self.hair_color = 'black'
+    kitchen_table = Table('wood', 4, 'white')
+    kitchen_table.info()
 
-        def dye_hair(self, new_color):
-            self.hair_color = new_color
+    # I am a table made of wood and with 4 legs.
 
-    peter = Person('Peter', 33)
-    peter.dye_hair('blue')
+How do we change and attribute of the table? This way::
 
-*class* means that we are going to give the abstract definition of an object, in this case a *Person*. Then, *peter* is an object of type *Person* and ``peter.dye_hair('blue')`` means that peter executes its method *dye_hair*, i.e, ``self.hair_color = new_color``. It's like peter said: "hair color **of self** is blue".
+    kitchen_table.color = 'red'
 
-The expression ``peter = Person('Peter', 33)`` means that we are creating an object and assigning it to the variable *peter*. Then *peter* executes its *__init__* [#]_ method with the parameters *name* and *age*, 'Peter' and 33.
+Now is the moment to examine the code of the class. When we create a table with ``kitchen_table = Table('wood', 4, 'white')``, this new table will execute the *__init__* [#]_ method [#]_::
+
+    def __init__(self, material, legs, color):
+        self.material = material
+        self.legs = legs
+        self.color = color
 
 .. [#] also known as the *constructor*.
+.. [#] method is how we call a function in the context of an object
 
-Another example::
+Note that *wood* value goes to *material* parameter, *4* to *legs* and *white* to *color*. Then, what is ``self.color = color``? *self* is the newly created table, so it is assigning the value *white* to its attribute *color*.
 
-    class Person:
-        def __init__(self, name, age):
+Imagine the same through a method::
+
+    class Table:
+        ...
+        def change_color(self, color):
+            self.color = color
+
+    table = Table('wood', 4, 'white')
+    table.change_color('yellow')
+
+``table.change_color('yellow')`` means that *table* is going to execute its method *change_color*, which has ``self.color = color``. In this case *self* is the object *table*.
+
+Inheritance
+^^^^^^^^^^^
+
+A class can extends the definition of another class, called the *base* class. Imagine a *Pet* class as a base class::
+
+    class Pet:
+        def __init__(self, name):
             self.name = name
-            self.age = age
 
-        def i_am_friend_of(self, other):
-            print(self.name, 'said: I am friend of ', other.name)
+        def speak(self):
+            print(self.name, ':')
 
-    peter = Person('Peter', 33)
-    mary = Person('Mary', 32)
-    peter.i_am_friend_of(mary)
-    # Peter said: I am friend of Mary
+        def my_name_is(self):
+            print('my name is', self.name)
+
+And now the class *Cat* that extend class *Pet*::
+
+    class Cat(Pet):
+        def __init__(self, name, color):
+            super().__init__(name)
+            self.color = color
+
+        def speak(self):
+            super().speak()
+            print('miauuuuu')
+
+``class Cat(Pet):`` means that the class *Cat* will have the methods of *Pet*. We can do the next thing::
+
+    mifu = Cat('Mifu')
+    mifu.my_name_is()
+
+    # my name is Mifu
+
+As you can see, *my_name_is* is not defined in *Cat*, but in *Pet*. *Cat* would have the method *__init__* from *Pet*, but it's overwritten. But we have a problem, because the *name* attribute is initialized in the *__init__* method of *Pet*. How do we access this?::
+
+    super().__init__(name)
+
+``super()`` means that this instance of Cat is going to be treated as a instance of *Pet*. So we call *__init__* of *Pet* for this cat.
+
+As we can see, *speak* method is also overwritten::
+
+    mifu = Cat('Mifu')
+    mifu.speak()
+
+    # Mifu :
+    # miauuuuu

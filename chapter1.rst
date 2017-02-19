@@ -72,7 +72,7 @@ Suppose we want to calculate the area of a right triangle::
 
     z = area(3, 4)
     print(z)
-    # 6
+    # 6.0
 
 *def* means we are going to write the definition of a function. A function may have some variables as input, and an output, a calculated value. The calculated value is returned by the keyword *return*. Here is a more sofisticated function, with several aparition of the word *return*::
 
@@ -101,7 +101,7 @@ You can see repetitive code::
 
     print("hello, my name's ...")
 
-Can we tell the computer the same thing with less code? Yes, iterating a list::
+Can we tell the computer the same thing with less code? Yes, iterating over a list::
 
     names = ['María', 'Miguel', 'Raquel']
 
