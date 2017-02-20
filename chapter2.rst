@@ -80,7 +80,7 @@ And now the class *Cat* that extend class *Pet*::
 
 ``class Cat(Pet):`` means that the class *Cat* will have the methods of *Pet*. We can do the next thing::
 
-    mifu = Cat('Mifu')
+    mifu = Cat('Mifu', 'white')
     mifu.my_name_is()
 
     # my name is Mifu
