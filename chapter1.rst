@@ -174,6 +174,38 @@ But if we want to iterate over a list of 1000 integers, should I write the entir
     # 998
     # 999
 
+Break inside a loop
+^^^^^^^^^^^^^^^^^^^
+
+The next function calculates the index of an integer inside a list of integers::
+
+    def index(lista, elem):
+        i = 0
+        for x in lista:
+            if x == elem:
+                break
+            i = i + 1
+        if i == len(lista):
+            return None
+        else:
+            return i
+
+    my_list = [1, 7, 5, 3]
+    i = index(my_list, 5)
+    print(i)
+
+    # 2
+
+The same function but smarter::
+
+    def index(lista, elem):
+        i = 0
+        for x in lista:
+            if x == elem:
+                return i
+            i += 1
+        return None
+
 Dictionaries
 ^^^^^^^^^^^^
 Dictionaries are similar to lists, but instead of having an integer as index, it can have other kind of objects, like strings::
@@ -210,6 +242,7 @@ We say that *capitalize* is a method of the objects type *string*. We'll see mor
 
 Have you noticed that *capitalize* returns a new string while sort does not return a new list? This is because strings are immutable while lists are mutable objects.
 
-You can see more string-methods_.
+You can see more string-methods_ and more list-methods_.
 
 .. _string-methods: https://docs.python.org/3/library/stdtypes.html#string-methods
+.. _list-methods: https://docs.python.org/3.1/tutorial/datastructures.html#more-on-lists
