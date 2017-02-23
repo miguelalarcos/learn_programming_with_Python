@@ -131,6 +131,20 @@ But we can also use named parameters. The next calls are the same::
     f(a=1, b=2)
     f(b=2, a=1) # note we alter the order of the parameters
 
+Functions with default values
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Let's see the next signature::
+
+    def f(a, b=8):
+        print(a, b)
+
+    f(1,1)
+    # 1 1
+
+    f(1)
+    # 1 8
+
 Loops
 ^^^^^
 

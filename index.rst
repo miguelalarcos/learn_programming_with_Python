@@ -11,6 +11,5 @@ Welcome to Learn programming's documentation!
    :caption: Contents:
 
    chapter1
-   chapter2
    advanced
-   
+   oop
