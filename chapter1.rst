@@ -32,6 +32,15 @@ Variables
     z = 8
     print(z)
     # 8
+    print("z") # please note the difference
+    # z
+
+::
+
+    x = 1
+    y = 2
+    z = x + y*2
+    z = (x +y)*2 # please note the difference
 
 Lists
 ^^^^^
@@ -234,6 +243,38 @@ Dictionaries are similar to lists, but instead of having an integer as index, it
 We can add elements to dictionaries::
 
     dct_DNI['2234H'] = 'Paul'
+
+Sets
+^^^^
+
+There's no repeated elements in a set::
+
+    s = set()
+    s.add(1)
+    s.add(2)
+    s.add(1)
+
+    print(s)
+    # {1, 2}
+
+Comprehensions
+^^^^^^^^^^^^^^
+
+How to construct lists, sets and dictionaries from a list::
+
+    lista = [1, 2, 3]
+
+    lista2 = [x*2 for x in lista]
+    print(lista2)
+    # [2, 4, 6]
+
+    s = {x*2 for x in lista}
+    print(s)
+    # {2, 4, 6}
+
+    d = {x: x*2 for x in lista}
+    print(d)
+    # {1: 2, 2: 4, 3: 6}
 
 Methods of strings and lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
