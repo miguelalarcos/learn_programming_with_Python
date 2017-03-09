@@ -40,7 +40,7 @@ Variables
     x = 1
     y = 2
     z = x + y*2
-    z = (x +y)*2 # please note the difference
+    z = (x + y)*2 # please note the difference
 
 Lists
 ^^^^^
@@ -264,9 +264,9 @@ How to construct lists, sets and dictionaries from a list::
 
     lista = [1, 2, 3]
 
-    lista2 = [x*2 for x in lista]
+    lista2 = [x*2 for x in lista if x%2 == 1]
     print(lista2)
-    # [2, 4, 6]
+    # [2, 6]
 
     s = {x*2 for x in lista}
     print(s)
