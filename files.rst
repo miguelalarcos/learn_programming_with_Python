@@ -4,7 +4,7 @@ Input and ouput
 Open and read
 ^^^^^^^^^^^^^
 
-::
+We use the global function *open*::
 
     f = open('my_file.txt', 'r')
     for line in f:
@@ -20,7 +20,7 @@ the same with context manager. Note we don't need to call *close*::
 csv
 ^^^
 
-::
+In this example we see how to read and how to write a csv::
 
     import csv
 
