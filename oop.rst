@@ -100,3 +100,30 @@ As we can see, *speak* method is also overwritten::
 
     # Mifu :
     # miauuuuu
+
+Exercise
+^^^^^^^^
+
+Define a stack class using a list as a container::
+
+    class Stack:
+        def __init__(self):
+            self.container = []
+
+        def is_empty(self):
+            return self.size() == 0
+
+        def push(self, item):
+            self.container.append(item)
+
+        def pop(self):
+            return self.container.pop()
+
+        def size(self):
+            return len(self.container)
+
+    s = myStack()
+    s.push('1')
+    s.push('2')
+    print(s.pop())
+    # 2
