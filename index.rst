@@ -11,6 +11,8 @@ Welcome to Learn programming's documentation!
    :caption: Contents:
 
    chapter1
+   dates
+   modules
    files
    advanced
    oop

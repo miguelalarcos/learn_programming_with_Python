@@ -69,6 +69,15 @@ Concatenating lists::
     print(list3)
     # ['a', 'b', 1, 2]
 
+Tuples
+^^^^^^
+
+Tuples are an immutable sequence of items::
+
+    tupla = (8, 1, 9, 12)
+
+Exercise: write a list of tuples.    
+
 Conditions
 ^^^^^^^^^^
 
@@ -250,7 +259,7 @@ enumerate, sorted and zip
 
         lista = ['c', 'b', 'a']
         for v in sorted(lista):
-            print(i, v)
+            print(v)
 
         lista1 = ['a', 'b', 'c']
         lista2 = ['x', 'y', 'z']
@@ -277,6 +286,18 @@ And iterate over the dict::
 
     for key, value in DNI.items():
         print(k, v)
+
+A more complex example::
+
+    data = [('miguel', 1), ('raquel', 2), ('miguel', 3), ...]
+    marks = {}
+    for name, mark in data:
+        if name not in marks:
+            marks[name] = mark
+        else:
+            marks[name] += mark
+
+    print('mark for miguel:', marks['miguel'])
 
 Sets
 ^^^^

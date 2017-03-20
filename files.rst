@@ -29,7 +29,7 @@ In this example we see how to read and how to write a csv::
     with open('count.csv', 'r') as csvfile:
         reader = csv.reader(csvfile, delimiter=',', quotechar='"')
         for row in reader:
-            name, count = row
+            name, count, date = row
             if name not in names:
                 names[name] = count
             else:

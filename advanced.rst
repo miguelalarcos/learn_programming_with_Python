@@ -67,8 +67,3 @@ From http://eigenhombre.com/2013/04/20/introduction-to-context-managers::
         [doproc() for _ in range(500)]
 
     # processes took 15.236166954 seconds.
-
-    with time_print("threads"):
-        [dothread() for _ in range(500)]
-
-    # threads took 0.11357998848 seconds.
