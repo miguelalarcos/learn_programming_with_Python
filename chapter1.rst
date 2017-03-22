@@ -9,15 +9,17 @@ The basics of coding
 Printing
 ^^^^^^^^
 
-How to tell the computer to print some text::
+How to tell the computer to print some text [#]_::
 
     print("hello, I am a computer!")
-    # hello, I am a computer!
+    > hello, I am a computer!
+
+.. [#] the simbol *>* is used to show what the computer prints.
 
 or we can print a number::
 
     print(7)
-    # 7
+    > 7
 
 Variables
 ^^^^^^^^^
@@ -28,12 +30,12 @@ Variables
     y = 2
     z = x + y
     print(z)
-    # 3
+    > 3
     z = 8
     print(z)
-    # 8
+    > 8
     print("z") # please note the difference
-    # z
+    > z
 
 Precedence::
 
@@ -50,15 +52,15 @@ Lists
     lista = ['red', 'yellow', 'green']
 
     print(lista[0])
-    # red
+    > red
     print(lista[1])
-    # yellow
+    > yellow
 
 We access the first position of a list with the index *0*. And this is how we modify a list::
 
     lista[0] = 'black'
     print(lista)
-    # ['black', 'yellow', 'green']
+    > ['black', 'yellow', 'green']
 
 Concatenating lists::
 
@@ -67,7 +69,7 @@ Concatenating lists::
 
     list3 = list1 + list2
     print(list3)
-    # ['a', 'b', 1, 2]
+    > ['a', 'b', 1, 2]
 
 Tuples
 ^^^^^^
@@ -76,7 +78,7 @@ Tuples are an immutable sequence of items::
 
     tupla = (8, 1, 9, 12)
 
-Exercise: write a list of tuples.    
+Exercise: write a list of tuples.
 
 Conditions
 ^^^^^^^^^^
@@ -104,7 +106,7 @@ Suppose we want to calculate the area of a right triangle::
 
     z = area(3, 4)
     print(z)
-    # 6.0
+    > 6.0
 
 *def* means we are going to write the definition of a function. A function may have some variables as input, and an output, a calculated value. The calculated value is returned by the keyword *return*. Here is a more sofisticated function, with several apparition of the word *return*::
 
@@ -137,7 +139,7 @@ Now a function that returns a text like "2 days, 7 hours, 5 minutes and 30 secon
     t = time_repr(1000000)
     print(t)
 
-    # 11 days, 13 hours, 46 minutes and 40 seconds
+    > 11 days, 13 hours, 46 minutes and 40 seconds
 
 Functions with named parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -152,7 +154,7 @@ We can call the function as we have seen::
     z = f(1,2)
     print(z)
 
-    # 5
+    > 5
 
 But we can also use named parameters. The next calls are the same::
 
@@ -168,10 +170,10 @@ Let's see the next signature::
         print(a, b)
 
     f(1,1)
-    # 1 1
+    > 1 1
 
     f(1)
-    # 1 8
+    > 1 8
 
 Loops
 ^^^^^
@@ -182,9 +184,9 @@ Let's examine this example::
     print("hello, my name's Miguel")
     print("hello, my name's Raquel")
 
-    # hello, my name's María
-    # hello, my name's Miguel
-    # hello, my name's Raquel
+    > hello, my name's María
+    > hello, my name's Miguel
+    > hello, my name's Raquel
 
 You can see repetitive code::
 
@@ -209,12 +211,12 @@ But if we want to iterate over a list of 1000 integers, should I write the entir
     for i in range(1000):
         print(i)
 
-    # 0
-    # 1
-    # 2
+    > 0
+    > 1
+    > 2
     ...
-    # 998
-    # 999
+    > 998
+    > 999
 
 Break inside a loop
 ^^^^^^^^^^^^^^^^^^^
@@ -236,7 +238,7 @@ The next function calculates the index of an integer inside a list of integers::
     i = index(my_list, 5)
     print(i)
 
-    # 2
+    > 2
 
 The same function but smarter::
 
@@ -276,7 +278,7 @@ Dictionaries are similar to lists, but instead of having an integer as index, it
     person = DNI['4842R']
     print(person)
 
-    # Miguel
+    > Miguel
 
 We can add elements to dictionaries::
 
@@ -310,7 +312,7 @@ There's no repeated elements in a set::
     s.add(1)
 
     print(s)
-    # {1, 2}
+    > {1, 2}
 
 Intersection and union of sets::
 
@@ -319,11 +321,11 @@ Intersection and union of sets::
 
     intersec = conjunto1.intersection(conjunto2)
     print(intersec)
-    # {2, 3}
+    > {2, 3}
 
     union = conjunto1.union(conjunto2)
     print(union)
-    # {1, 2, 3, 4}
+    > {1, 2, 3, 4}
 
 Comprehensions
 ^^^^^^^^^^^^^^
@@ -334,15 +336,15 @@ How to construct lists, sets and dictionaries from a list::
 
     lista2 = [x*2 for x in lista if x%2 == 1]
     print(lista2)
-    # [2, 6]
+    > [2, 6]
 
     s = {x*2 for x in lista}
     print(s)
-    # {2, 4, 6}
+    > {2, 4, 6}
 
     d = {x: x*2 for x in lista}
     print(d)
-    # {1: 2, 2: 4, 3: 6}
+    > {1: 2, 2: 4, 3: 6}
 
 Methods of strings and lists and sets
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -353,7 +355,7 @@ We can manipulate strings and lists with the dot notation::
     v = t.capitalize()
     print(v)
 
-    # Hello
+    > Hello
 
 We say that *capitalize* is a method of the objects type *string*. We'll see more on this in the Object Oriented Programming chapter. Another example, sorting a list::
 
@@ -361,7 +363,7 @@ We say that *capitalize* is a method of the objects type *string*. We'll see mor
     lista.sort()
     print(lista)
 
-    # [1, 2, 3, 7]
+    > [1, 2, 3, 7]
 
 Have you noticed that *capitalize* returns a new string while sort does not return a new list? This is because strings are immutable while lists are mutable objects.
 

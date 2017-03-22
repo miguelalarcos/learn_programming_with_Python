@@ -1,7 +1,7 @@
 Modules
 =======
 
-Your normally don't write all the code in only one file. The best approach is to aggrupe functionality for file.
+Your normally don't write all the code in only one file. The best approach is to aggrupe functionality related to something specific in one file.
 
 Imagine a file called *mathlib.py* that contains the next code::
 
@@ -19,7 +19,7 @@ And then, in your main file::
     import mathlib
 
     print(mathlib.add(3, 5))
-    # 8
+    > 8
 
 or::
 
@@ -27,4 +27,4 @@ or::
     from mathlib import add
 
     print(add(3, 5))
-    # 8
+    
