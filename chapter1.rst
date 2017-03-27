@@ -1,13 +1,8 @@
-Learn by example, not by heart
-==============================
-
-In the 80's I learned to program with my Amstrad CPC-464. No one showed me how to do it, I just learned the BASIC language by modifying examples, normally simple games. Today, the most suitable language to learn programming may be Python. Let's dive into coding.
-
 The basics of coding
---------------------
+====================
 
 Printing
-^^^^^^^^
+--------
 
 How to tell the computer to print some text [#]_::
 
@@ -22,15 +17,30 @@ or we can print a number::
     > 7
 
 Variables
-^^^^^^^^^
+---------
 
-::
+This is the simplest piece of code::
 
-    x = 1
-    y = 2
-    z = x + y
+    x = 8
+
+What does it mean? It means that whenever we use the name *x*, it's equal to 8. For example::
+
+    print(x)
+    > 8
+
+    z = x*2
     print(z)
-    > 3
+    > 16
+
+We can change the value of a variable whenever we want to::
+
+    x = 2
+    x = x*3
+    print(x)
+    > 6
+
+A literal vs a variable::
+
     z = 8
     print(z)
     > 8
@@ -45,14 +55,15 @@ Precedence::
     z = (x + y)*2 # please note the difference
 
 Lists
-^^^^^
+-----
 
-::
+A list is a sequence of values::
 
     lista = ['red', 'yellow', 'green']
 
     print(lista[0])
     > red
+
     print(lista[1])
     > yellow
 
@@ -72,7 +83,7 @@ Concatenating lists::
     > ['a', 'b', 1, 2]
 
 Tuples
-^^^^^^
+------
 
 Tuples are an immutable sequence of items::
 
@@ -81,7 +92,7 @@ Tuples are an immutable sequence of items::
 Exercise: write a list of tuples.
 
 Conditions
-^^^^^^^^^^
+----------
 
 Please note the *==* for the condition and the *=* for the asignment::
 
@@ -97,7 +108,7 @@ Please note the *==* for the condition and the *=* for the asignment::
         print('other value')
 
 Functions
-^^^^^^^^^
+---------
 
 Suppose we want to calculate the area of a right triangle::
 
@@ -117,29 +128,6 @@ Suppose we want to calculate the area of a right triangle::
             return 1
         else:
             return -1
-
-Now a function that returns a text like "2 days, 7 hours, 5 minutes and 30 seconds" given a number of seconds::
-
-    def time_repr(seconds):
-        seconds_in_a_day = 24*60*60
-        seconds_in_an_hour = 60*60
-        seconds_in_a_minute = 60
-
-        days = seconds // seconds_in_a_day
-        rest = seconds % seconds_in_a_day
-
-        hours = rest // seconds_in_an_hour
-        rest = rest % seconds_in_an_hour
-
-        minutes = rest // seconds_in_a_minute
-        seconds = rest % seconds_in_a_minute
-
-        return "%d days, %d hours, %d minutes and %d seconds" % (days, hours, minutes, seconds)
-
-    t = time_repr(1000000)
-    print(t)
-
-    > 11 days, 13 hours, 46 minutes and 40 seconds
 
 Functions with named parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -176,7 +164,7 @@ Let's see the next signature::
     > 1 8
 
 Loops
-^^^^^
+-----
 
 Let's examine this example::
 
@@ -219,7 +207,7 @@ But if we want to iterate over a list of 1000 integers, should I write the entir
     > 999
 
 Break inside a loop
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 The next function calculates the index of an integer inside a list of integers::
 
@@ -251,7 +239,7 @@ The same function but smarter::
         return None
 
 enumerate, sorted and zip
-^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------
 
     ::
 
@@ -270,7 +258,7 @@ enumerate, sorted and zip
             print(v1, v2)
 
 Dictionaries
-^^^^^^^^^^^^
+------------
 Dictionaries are similar to lists, but instead of having an integer as index, it can have other kind of objects as index, like strings::
 
     DNI = {'4842R': 'Miguel', '2256Z': 'Raquel'}
@@ -302,7 +290,7 @@ A more complex example::
     print('mark for miguel:', marks['miguel'])
 
 Sets
-^^^^
+----
 
 There's no repeated elements in a set::
 
@@ -328,7 +316,7 @@ Intersection and union of sets::
     > {1, 2, 3, 4}
 
 Comprehensions
-^^^^^^^^^^^^^^
+--------------
 
 How to construct lists, sets and dictionaries from a list::
 
@@ -347,7 +335,7 @@ How to construct lists, sets and dictionaries from a list::
     > {1: 2, 2: 4, 3: 6}
 
 Methods of strings and lists and sets
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 
 We can manipulate strings and lists with the dot notation::
 

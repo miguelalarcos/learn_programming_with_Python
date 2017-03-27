@@ -6,8 +6,8 @@ Open and read
 
 We use the global function *open*::
 
-    f = open('my_file.txt', 'r')
-    for line in f:
+    f = open('my_file.txt', 'r') # f is an object that references my_file
+    for line in f:               # we can iterate over the file, line by line
         print(line)
     f.close()
 
