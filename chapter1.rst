@@ -1,6 +1,11 @@
 The basics of coding
 ====================
 
+This is a tutorial on how to learn programming based on the Python language. You can download the free Python editor PyCharm_ Community, available on Linux and Windows. Also you need the language Python_.
+
+.. _Python: https://www.python.org/downloads/
+.. _PyCharm: https://www.jetbrains.com/pycharm/download/#section=linux
+
 Printing
 --------
 
@@ -110,11 +115,12 @@ Please note the *==* for the condition and the *=* for the asignment::
 Functions
 ---------
 
-Suppose we want to calculate the area of a right triangle::
+Functions are useful when you don't want to repeat code. Suppose we want to calculate the area of a right triangle in a lot of places. Instead of writing the formula in every place, you can do the next thing::
 
     def area(side_a, side_b):
         return (side_a*side_b)/2.0
 
+    x = area(1, 2)
     z = area(3, 4)
     print(z)
     > 6.0
@@ -163,6 +169,8 @@ Let's see the next signature::
     f(1)
     > 1 8
 
+If we don't provide de *b* argumente, then the default value (8) will be used.
+
 Loops
 -----
 
@@ -171,10 +179,6 @@ Let's examine this example::
     print("hello, my name's María")
     print("hello, my name's Miguel")
     print("hello, my name's Raquel")
-
-    > hello, my name's María
-    > hello, my name's Miguel
-    > hello, my name's Raquel
 
 You can see repetitive code::
 
@@ -238,6 +242,12 @@ The same function but smarter::
             i += 1
         return None
 
+Of course Python comes with a method to calculate this::
+
+    lista = [3,2,1]
+    print(lista.index(1))
+    > 2
+
 enumerate, sorted and zip
 -------------------------
 
@@ -247,15 +257,27 @@ enumerate, sorted and zip
         for i, v in enumerate(lista):
             print(i, v)
 
+        > 0 a
+        > 1 b
+        > 2 c
+
         lista = ['c', 'b', 'a']
         for v in sorted(lista):
             print(v)
+
+        > a
+        > b
+        > c
 
         lista1 = ['a', 'b', 'c']
         lista2 = ['x', 'y', 'z']
 
         for v1, v2 in zip(lista1, lista2):
             print(v1, v2)
+
+        > a x
+        > b y
+        > c z    
 
 Dictionaries
 ------------
