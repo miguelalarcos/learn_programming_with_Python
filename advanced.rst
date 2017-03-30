@@ -2,7 +2,7 @@ Advanced
 ========
 
 Decorators
-^^^^^^^^^^
+----------
 
 A decorator is a function that receives as argument another function and returns another function. See an example::
 
@@ -25,7 +25,7 @@ A decorator is a function that receives as argument another function and returns
 @ notation means that we apply the decorator *print_arguments* to the function *add*. *print_argument* is called with *add* as argument. Inside *print_argument* we define a *helper* function which will be the function returned. Inside *helper* we print the arguments and return the value returned by *add*.
 
 Generators
-^^^^^^^^^^
+----------
 
 A generator is a function that has state. It does not use the *return* statement as in normal functions, but the *yield* statement::
 
@@ -48,7 +48,7 @@ The use of *yield value* means that the *value* is returned, and the function st
         print(x)
 
 Contexts
-^^^^^^^^
+--------
 
 From http://eigenhombre.com/2013/04/20/introduction-to-context-managers::
 
@@ -67,3 +67,21 @@ From http://eigenhombre.com/2013/04/20/introduction-to-context-managers::
         [doproc() for _ in range(500)]
 
     # processes took 15.236166954 seconds.
+
+Itertools
+---------
+
+::
+    
+    from itertools import cycle, count
+
+    lista = [1, 3, 5, 7, 9]
+
+    for v1, v2, v3 in zip(lista, count(), cycle('AB')):
+        print(v1, v2, v3)
+
+    > 1 0 A
+    > 3 1 B
+    > 5 2 A
+    > 7 3 B
+    > 9 4 A

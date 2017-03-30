@@ -211,7 +211,7 @@ But if we want to iterate over a list of 1000 integers, should I write the entir
     > 999
 
 Break inside a loop
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 The next function calculates the index of an integer inside a list of integers::
 
@@ -248,6 +248,20 @@ Of course Python comes with a method to calculate this::
     print(lista.index(1))
     > 2
 
+Continue inside a loop
+^^^^^^^^^^^^^^^^^^^^^^
+
+*continue* passes the control of execution to the beginning of the loop::
+
+    for x in range(5):
+        if x < 2:
+            continue
+        print(x)
+
+    > 2
+    > 3
+    > 4
+
 enumerate, sorted and zip
 -------------------------
 
@@ -277,7 +291,7 @@ enumerate, sorted and zip
 
         > a x
         > b y
-        > c z    
+        > c z
 
 Dictionaries
 ------------
